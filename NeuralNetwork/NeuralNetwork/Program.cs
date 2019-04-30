@@ -26,7 +26,7 @@ namespace NeuralNetwork
 
             //neuralNetwork.Save();
 
-            //Eat many memory
+            //Eat many memory, i dont try run this
             CNeuralNetwork neuralNetwork = new CNeuralNetwork("CyrilicRecognition", 21025, 30000, 32);
             CImageInterpreter imageInterpreter = new CImageInterpreter();
             for (int i = 0; i < imageInterpreter.GetLetterCount(); ++i)
