@@ -1,0 +1,8 @@
+C:\Users\dbogdano\source\repos\NeuralNetwork\NeuralNetwork\bin\x64\NeuralNetwork.exe.config
+C:\Users\dbogdano\source\repos\NeuralNetwork\NeuralNetwork\bin\x64\NeuralNetwork.exe
+C:\Users\dbogdano\source\repos\NeuralNetwork\NeuralNetwork\bin\x64\Json.dll
+C:\Users\dbogdano\source\repos\NeuralNetwork\NeuralNetwork\bin\x64\Json.pdb
+C:\Users\dbogdano\source\repos\NeuralNetwork\NeuralNetwork\obj\x64\NeuralNetwork.csprojAssemblyReference.cache
+C:\Users\dbogdano\source\repos\NeuralNetwork\NeuralNetwork\obj\x64\NeuralNetwork.csproj.CoreCompileInputs.cache
+C:\Users\dbogdano\source\repos\NeuralNetwork\NeuralNetwork\obj\x64\NeuralNetwork.csproj.CopyComplete
+C:\Users\dbogdano\source\repos\NeuralNetwork\NeuralNetwork\obj\x64\NeuralNetwork.exe
