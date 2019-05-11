@@ -6,3 +6,4 @@ C:\Users\dbogdano\source\repos\NeuralNetwork\NeuralNetwork\obj\x64\NeuralNetwork
 C:\Users\dbogdano\source\repos\NeuralNetwork\NeuralNetwork\obj\x64\NeuralNetwork.csproj.CoreCompileInputs.cache
 C:\Users\dbogdano\source\repos\NeuralNetwork\NeuralNetwork\obj\x64\NeuralNetwork.csproj.CopyComplete
 C:\Users\dbogdano\source\repos\NeuralNetwork\NeuralNetwork\obj\x64\NeuralNetwork.exe
+C:\Users\dbogdano\source\repos\NeuralNetwork\NeuralNetwork\bin\x64\LibraryOfEverything.dll

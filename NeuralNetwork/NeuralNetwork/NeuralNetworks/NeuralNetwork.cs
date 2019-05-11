@@ -16,12 +16,12 @@ namespace NeuralNetwork
         private List<CNeuron> m_OutputNeurons = new List<CNeuron>();
 
         private JsonCommander jsonCommander;
-        private double epsilon = 0.7;
+        private double epsilon = 0.1;
         private double alpha = 0.3;
 
         private Random random = new Random();
-        
-        public CNeuralNetwork(string name, int inputCount, int hiddenCount, int outputCount)
+
+        public void Create(string name, int inputCount, int hiddenCount, int outputCount)
         {
             jsonCommander = new JsonCommander();
             m_name = name;
@@ -58,9 +58,10 @@ namespace NeuralNetwork
                     }
                 }
             }
-            Print("After Create");
+            System.Console.WriteLine("Neural Network is initialized");
+            //Print("After Create");
         }
-
+ 
         private List<double>[] GetInputSynapses()
         {
             List<double>[] synapses = new List<double>[m_InputNeurons.Count];
@@ -153,7 +154,7 @@ namespace NeuralNetwork
             double error = 0;
             for (int i = 0; i < result.Count; ++i)
             {
-                error = (result[i] - answer[i]) * (result[i] - answer[i]);
+                error += (result[i] - answer[i]) * (result[i] - answer[i]);
             }
             error /= result.Count;
             //Console.WriteLine("Error: " + error);
@@ -166,7 +167,6 @@ namespace NeuralNetwork
             for (int i = 0; i < inputValue.Count; ++i)
             {
                 m_InputNeurons[i].SetValue(Sigmoid(inputValue[i]));
-                //m_InputNeurons[i].SetValue((inputValue[i]));
             }
 
             for (int i = 0; i < m_HiddenNeurons.Count; ++i)
@@ -177,7 +177,6 @@ namespace NeuralNetwork
                     hiddenValue += (m_InputNeurons[j].GetValue() * m_InputNeurons[j].GetCertainSynapse(i));
                 }
                 m_HiddenNeurons[i].SetValue(Sigmoid(hiddenValue));
-                //m_HiddenNeurons[i].SetValue(hiddenValue);
             }
 
             for (int i = 0; i < m_OutputNeurons.Count; ++i)
@@ -188,7 +187,6 @@ namespace NeuralNetwork
                     outputValue += (m_HiddenNeurons[j].GetValue() * m_HiddenNeurons[j].GetCertainSynapse(i));
                 }
                 m_OutputNeurons[i].SetValue(Sigmoid(outputValue));
-                //m_OutputNeurons[i].SetValue((outputValue));
 
             }
 
@@ -235,6 +233,7 @@ namespace NeuralNetwork
             var inputSynapses = GetInputSynapses();
             var hiddenSynapses = GetHiddenSynapses();
             jsonCommander.Serialize(m_name, inputSynapses, hiddenSynapses);
+            System.Console.WriteLine("Neural Network save values");
         }
 
     }
