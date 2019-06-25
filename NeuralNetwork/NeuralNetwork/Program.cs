@@ -29,7 +29,7 @@ namespace NeuralNetwork
             //neuralNetwork.Save();
 
 
-            //I think it's dont work.
+            //I think, it does not workk.
             CСonvolutionalNeuralNetwork convolutionalNeuralNetwork = new CСonvolutionalNeuralNetwork();
             convolutionalNeuralNetwork.Create("CyrilicRecognition", 100, 1000, 29);
             CImageInterpreter imageInterpreter = new CImageInterpreter();
